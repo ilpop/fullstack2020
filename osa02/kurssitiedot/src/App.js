@@ -10,5 +10,4 @@ function App( {courses} ) {
       )
     }
 
-
 export default App;
