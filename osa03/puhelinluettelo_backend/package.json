@@ -1,0 +1,32 @@
+{
+  "name": "puhelinluettelo_backend",
+  "version": "1.0.0",
+  "description": "fullstack osa03 tehtavat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "build:ui": "rm -rf build && cd ../../fullstack2020/osa03/puhelinluettelo-new && npm run build --prod && cp -r build ../../../fullstack2020_osa03/puhelinluettelo_backend/",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
+  },
+  "author": "Ilkka Ihalainen",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "mongoose-unique": "0.0.5",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "nodemon": "^2.0.4"
+  }
+}
