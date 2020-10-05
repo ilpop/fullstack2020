@@ -1,1 +1,1 @@
-# fullstack2020
+# fullstack2020 -kurssin tehtävät
